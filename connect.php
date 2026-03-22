@@ -5,5 +5,7 @@
     $db_password = "";
     $db_name = "osadnicy";
 
+    
+
 
 ?>
