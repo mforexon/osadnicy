@@ -2,8 +2,8 @@
 session_start();
 
 if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true)) {
-header('Location: gra.php');
-exit();
+	header('Location: gra.php');
+	exit();
 }
 ?>
 
@@ -23,6 +23,7 @@ exit();
  <form action="zaloguj.php" method="POST">
  
  Login: <br> <input type="text" name="login"/><br>
+ Login: <br> <input type="text" name="logimn"/><br>
  Haslo: <br> <input type="password" name="haslo"/><br><br>
  <input type="submit" value="Zaloguj sie"/>
  
