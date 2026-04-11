@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true)) {
+if((isset($_SESSION['zalogowany']))) {
 	header('Location: gra.php');
 	exit();
 }
@@ -19,18 +19,24 @@ if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true)) {
 <body>
  
  Tylko martwi ujrzeli koniec wojny- Platon <br><br>
+
+ <a href="rejestracja.php">Rejestracja</a>
  
  <form action="zaloguj.php" method="POST">
- 
- Login: <br> <input type="text" name="login"/><br>
- Login: <br> <input type="text" name="logimn"/><br>
- Haslo: <br> <input type="password" name="haslo"/><br><br>
+ <br>
+ Login: <br> <input type="text" name="login" placeholder="Login" required /><br>
+ Haslo: <br> <input type="password" name="haslo" placeholder="Hasło" required /><br><br>
  <input type="submit" value="Zaloguj sie"/>
  
  
  </form>
+ <?php
+ if(isset($_SESSION['udanaRejestracja'])){
+	echo $_SESSION['udanaRejestracja'];
+	unset($_SESSION['udanaRejestracja']);
+ }
 
-<?php
+
 if(isset($_SESSION['blad'])) 
 
 	echo $_SESSION['blad'];
