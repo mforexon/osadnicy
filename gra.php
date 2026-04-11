@@ -13,7 +13,7 @@ if(!isset($_SESSION['zalogowany'])){
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	
-	<title> Osadnicy - gra przegladarkowa</title>
+	<title> Osadnicy - gra przegladarkowa!!!</title>
 </head>
 
 	<body>
